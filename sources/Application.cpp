@@ -24,7 +24,7 @@ void Application::Run()
 		m_Level.Update(dt);
 
 		m_Window.DispatchEvents();
-		Sleep(Milliseconds(12));
+		//Sleep(Milliseconds(12));
 	}
 }
 

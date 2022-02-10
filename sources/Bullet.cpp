@@ -8,7 +8,7 @@ Bullet::Bullet(Vector2f Position, Vector2f Direction)
 {
 	this->Direction = Direction / (float)sqrt(Direction.x * Direction.x + Direction.y * Direction.y);
 	FillColor = Color::Red;
-	Position = Position;
+	this->Position = Position;
 	Rotation = atan2(this->Direction.y, this->Direction.x) * 180.0f / 3.14159265f;
 	Size = Vector2f(10.0f, 10.0f);
 	Origin = Vector2f(Size.x / 2, Size.y / 2);
