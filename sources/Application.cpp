@@ -2,6 +2,10 @@
 #include <core/os/sleep.hpp>
 Application *Application::s_Instance = nullptr;
 
+Application::Application() {
+	m_Window.SetEventsHanlder({this, &Application::OnEvent});
+}
+
 void Application::Run()
 {
 	Semaphore acqure, present;
@@ -30,9 +34,15 @@ Vector2s Application::MousePosition()
 {
 	return m_LastMousePosition;
 }
+
 Level& Application::CurLevel()
 {
 	return m_Level;
+}
+
+void Application::OnEvent(const Event& e) {
+	if (e.Type == EventType::WindowClose)
+		m_Window.Close();
 }
 
 Application& Application::Get()

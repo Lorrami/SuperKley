@@ -17,11 +17,15 @@ private:
     Clock m_GameClock;
 	Vector2s m_LastMousePosition;
 private:
-	Application() = default;
+	Application();
 public:
 	void Run();
+
 	Vector2s MousePosition();
+
 	Level& CurLevel();
+
+	void OnEvent(const Event &e);
 
 	static Application &Get();
 };
