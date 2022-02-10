@@ -1,0 +1,9 @@
+[submodule "StraitXPackages/2D"]
+	path = StraitXPackages/2D
+	url = https://github.com/StraitX/2D
+[submodule "StraitXPackages/ImGui"]
+	path = StraitXPackages/ImGui
+	url = https://github.com/StraitX/ImGui
+[submodule "StraitXPackages/Base"]
+	path = StraitXPackages/Base
+	url = https://github.com/StraitX/Base
