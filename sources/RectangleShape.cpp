@@ -1,6 +1,7 @@
 #include "RectangleShape.hpp"
 
-bool RectangleShape::FindIntersection(GameObject *Object)
+bool RectangleShape::FindIntersection(RectangleShape *Object)
 {
+	
 	return true;
 }
