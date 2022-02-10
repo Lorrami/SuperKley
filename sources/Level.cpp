@@ -2,7 +2,6 @@
 
 #include "Level.hpp"
 #include "GameObject.hpp"
-#include <iostream>
 
 Level::Level()
 {
@@ -23,7 +22,7 @@ void Level::Update(float dt)
         Object->Update(dt);
 		for (GameObject* NextObject : m_Objects)
 		{
-			//if (Object != NextObject && Object->getGlobalBounds().findIntersection(NextObject->getGlobalBounds()))
+			if (Object != NextObject && Object->FindIntersection()
 			{
 				Object->OnColliderEnter(NextObject);
 			}
