@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <graphics/render_window.hpp>
 #include "Player.hpp"
 
 class Level
@@ -14,5 +15,5 @@ public:
 	void Add(GameObject* Object);
 	void Remove(GameObject* Object);
 	void Update(float dt);
-	void Draw(sf::RenderWindow *window);
+	void Draw(RenderWindow *window);
 };

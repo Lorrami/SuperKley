@@ -1,6 +1,8 @@
 #pragma once
 
-class GameObject: public sf::RectangleShape
+#include "RectangleShape.hpp"
+
+class GameObject: public RectangleShape
 {
 public:
 	virtual void OnColliderEnter(GameObject *Object);

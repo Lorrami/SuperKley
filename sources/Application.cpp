@@ -6,23 +6,25 @@ Application Application::s_Instance;
 
 void Application::Run()
 {
-	while (m_Window.isOpen())
+	Semaphore think;
+	while (m_Window.IsOpen())
 	{
-		float dt = m_GameClock.getElapsedTime().asSeconds();
-		m_GameClock.restart();
-		
-		m_Window.clear();
+		float dt = m_GameClock.GetElapsedTime().AsSeconds();
+		m_GameClock.Restart();
 
+		m_Window.AcquireNextFramebuffer(&think);
+		m_Window.PresentCurrentFramebuffer(&think);
+		
 		m_Level.Update(dt);
 		m_Level.Draw(&m_Window);
 
-		m_Window.display();
+		m_Window.DispatchEvents();
 	}
 }
 
-sf::Vector2i Application::MousePosition()
+Vector2s Application::MousePosition()
 {
-	return sf::Mouse::getPosition(m_Window);
+	return Mouse::RelativePosition(m_Window);
 }
 Level& Application::CurLevel()
 {

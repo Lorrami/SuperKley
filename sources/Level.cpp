@@ -23,7 +23,7 @@ void Level::Update(float dt)
         Object->Update(dt);
 		for (GameObject* NextObject : m_Objects)
 		{
-			if (Object != NextObject && Object->getGlobalBounds().findIntersection(NextObject->getGlobalBounds()))
+			//if (Object != NextObject && Object->getGlobalBounds().findIntersection(NextObject->getGlobalBounds()))
 			{
 				Object->OnColliderEnter(NextObject);
 			}
@@ -48,10 +48,10 @@ void Level::Update(float dt)
 	}
 	m_PendingRemoveObjects.clear();
 }
-void Level::Draw(sf::RenderWindow *window)
+void Level::Draw(RenderWindow *window)
 {
 	for(GameObject *Object: m_Objects)
 	{
-		window->draw(*Object);
+		//window->draw(*Object);
 	}
 }

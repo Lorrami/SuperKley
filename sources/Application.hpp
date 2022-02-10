@@ -1,19 +1,22 @@
 #pragma once
 
 #include "Level.hpp"
+#include <graphics/render_window.hpp>
+#include <core/os/clock.hpp>
+#include <core/math/vector2.hpp>
 
 class Application
 {
 	static Application s_Instance;
 private:
-	sf::RenderWindow m_Window{ sf::VideoMode(700, 700), "Shooter"};
+	RenderWindow m_Window{ 700, 700, "Shooter"};
 	Level m_Level;
-    sf::Clock m_GameClock;
+    Clock m_GameClock;
 private:
 	Application() = default;
 public:
 	void Run();
-	sf::Vector2i MousePosition();
+	Vector2s MousePosition();
 	Level& CurLevel();
 
 	static Application &Get();
