@@ -38,10 +38,10 @@ void Level::Update(float dt)
 	}
 	m_PendingRemoveObjects.Clear();
 }
-void Level::Draw(RenderWindow *window)
+void Level::Draw(RectRenderer *Renderer)
 {
 	for(GameObject *Object: m_Objects)
 	{
-		//window->draw(*Object);
+		Renderer->DrawRect(Object->Position, Object->Size, Object->Origin, Object->Rotation, Object->FillColor);
 	}
 }

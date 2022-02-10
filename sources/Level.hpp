@@ -1,6 +1,7 @@
 #pragma once
 
 #include <core/list.hpp>
+#include <2d/rect_renderer.hpp>
 #include <graphics/render_window.hpp>
 #include "Player.hpp"
 
@@ -15,5 +16,5 @@ public:
 	void Add(GameObject* Object);
 	void Remove(GameObject* Object);
 	void Update(float dt);
-	void Draw(RenderWindow *window);
+	void Draw(RectRenderer *Renderer);
 };
