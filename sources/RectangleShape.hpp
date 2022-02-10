@@ -10,6 +10,6 @@ struct RectangleShape
 	Vector2f Size;
 	Vector2f Origin;
 	float Rotation = 0;
-	//void GetGlobalBounds(){}
+
 	bool FindIntersection(RectangleShape *Object);
 };

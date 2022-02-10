@@ -2,6 +2,8 @@
 
 bool RectangleShape::FindIntersection(RectangleShape *Object)
 {
-	
-	return true;
+	if (this->Position - this->Origin == Object->Position - Object->Origin)
+	{
+		return true;
+	}
 }

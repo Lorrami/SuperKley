@@ -24,7 +24,7 @@ void Level::Update(float dt)
 			if (Object != NextObject && Object->FindIntersection(NextObject))
 			{
 				Object->OnColliderEnter(NextObject);
-				Println("Shit");
+				Println("%", NextObject->Position);
 			}
 		}
 	}
