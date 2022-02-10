@@ -6,15 +6,15 @@
 
 Level::Level()
 {
-	m_Objects.push_back(new Player(60.0f));
+	m_Objects.Add(new Player(60.0f));
 }
 void Level::Add(GameObject* Object)
 {
-	m_PendingAddObjects.push_back(Object);
+	m_PendingAddObjects.Add(Object);
 }
 void Level::Remove(GameObject* Object)
 {
-	m_PendingRemoveObjects.push_back(Object);
+	m_PendingRemoveObjects.Add(Object);
 }
 void Level::Update(float dt)
 {
@@ -29,24 +29,14 @@ void Level::Update(float dt)
 			}
 		}
 	}
-
-	m_Objects.insert(m_Objects.end(), m_PendingAddObjects.begin(), m_PendingAddObjects.end());
-	m_PendingAddObjects.clear();
+	m_Objects.Append(m_PendingAddObjects);
+	m_PendingAddObjects.Clear();
 
 	for (GameObject* Object : m_PendingRemoveObjects)
 	{ 
-		for (int i = 0; i < m_Objects.size(); i++)
-		{
-			if (Object == m_Objects[i])
-			{
-				GameObject* TimeParam = m_Objects[i];
-				m_Objects[i] = m_Objects[m_Objects.size() - 1];
-				m_Objects[m_Objects.size() - 1] = TimeParam;
-				m_Objects.pop_back();
-			}
-		}
+		m_Objects.UnorderedRemove(Object);
 	}
-	m_PendingRemoveObjects.clear();
+	m_PendingRemoveObjects.Clear();
 }
 void Level::Draw(RenderWindow *window)
 {

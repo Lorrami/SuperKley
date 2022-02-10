@@ -1,15 +1,15 @@
 #pragma once
 
-#include <vector>
+#include <core/list.hpp>
 #include <graphics/render_window.hpp>
 #include "Player.hpp"
 
 class Level
 {
 private:
-	std::vector<GameObject*> m_Objects;
-	std::vector<GameObject*> m_PendingAddObjects;
-	std::vector<GameObject*> m_PendingRemoveObjects;
+	List<GameObject*> m_Objects;
+	List<GameObject*> m_PendingAddObjects;
+	List<GameObject*> m_PendingRemoveObjects;
 public:
 	Level();
 	void Add(GameObject* Object);

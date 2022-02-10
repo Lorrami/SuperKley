@@ -1,6 +1,8 @@
 #pragma once
 
 #include "GameObject.hpp"
+#include <core/os/keyboard.hpp>
+#include <core/os/mouse.hpp>
 
 class Player : public GameObject
 {
