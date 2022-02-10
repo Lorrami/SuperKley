@@ -1,5 +1,3 @@
-#pragma once
-
 #include "Application.hpp"
 #include <core/os/sleep.hpp>
 Application *Application::s_Instance = nullptr;

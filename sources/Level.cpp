@@ -1,5 +1,3 @@
-#pragma once
-
 #include "Level.hpp"
 #include "GameObject.hpp"
 #include <iostream>
