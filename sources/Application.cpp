@@ -2,7 +2,7 @@
 
 #include "Application.hpp"
 
-Application Application::s_Instance;
+Application *Application::s_Instance = nullptr;
 
 void Application::Run()
 {
@@ -33,6 +33,8 @@ Level& Application::CurLevel()
 
 Application& Application::Get()
 {
-	return s_Instance;
+	if(s_Instance == nullptr)
+		s_Instance = new Application();
+	return *s_Instance;
 }
 

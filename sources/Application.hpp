@@ -7,7 +7,8 @@
 
 class Application
 {
-	static Application s_Instance;
+public:
+	static Application *s_Instance;
 private:
 	RenderWindow m_Window{ 700, 700, "Shooter"};
 	Level m_Level;
