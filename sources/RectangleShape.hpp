@@ -10,4 +10,5 @@ struct RectangleShape
 	Vector2f Origin;
 	float Rotation = 0;
 	//void GetGlobalBounds(){}
+	bool FindIntersection(){}
 };
