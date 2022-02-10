@@ -1,7 +1,8 @@
-#include <core/print.hpp>
-#include <core/span.hpp>
+#include <iostream>
+#include <SFML/Graphics.hpp>
+#include "Application.hpp"
 
-int StraitXMain(Span<const char*> args) {
-	Println("SuperKley");
-	return 0;
+int main() {
+    Application::Get().Run();
+    return 777;
 }
