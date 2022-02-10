@@ -11,6 +11,11 @@ add_subdirectory(StraitXPackages/ImGui)
 
 set(SAMPLE_SOURCES
     "sources/main.cpp"
+    "sources/Application.cpp"
+    "sources/Bullet.cpp"
+    "sources/GameObject.cpp"
+    "sources/Level.cpp"
+    "sources/Player.cpp"
 )
 
 set(SAMPLE_INCLUDE
