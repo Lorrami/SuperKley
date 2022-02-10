@@ -1,4 +1,6 @@
 #pragma once
+
+#include "GameObject.hpp"
 #include <graphics/color.hpp>
 #include <core/math/vector2.hpp>
 
@@ -10,5 +12,5 @@ struct RectangleShape
 	Vector2f Origin;
 	float Rotation = 0;
 	//void GetGlobalBounds(){}
-	bool FindIntersection(){}
+	bool FindIntersection(GameObject *Object);
 };

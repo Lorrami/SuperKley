@@ -1,5 +1,6 @@
 #include "Level.hpp"
 #include "GameObject.hpp"
+#include "core/print.hpp"
 
 Level::Level()
 {
@@ -20,9 +21,10 @@ void Level::Update(float dt)
         Object->Update(dt);
 		for (GameObject* NextObject : m_Objects)
 		{
-			if (Object != NextObject && Object->FindIntersection()
+			if (Object != NextObject && Object->FindIntersection(NextObject))
 			{
 				Object->OnColliderEnter(NextObject);
+				Println("Shit");
 			}
 		}
 	}
