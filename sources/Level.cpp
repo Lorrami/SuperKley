@@ -1,10 +1,12 @@
 #include "Level.hpp"
 #include "GameObject.hpp"
+#include "Wall.hpp"
 #include "core/print.hpp"
 
 Level::Level()
 {
 	m_Objects.Add(new Player(60.0f));
+	m_Walls.Add(new Wall(300.0f));
 }
 void Level::Add(GameObject* Object)
 {
@@ -19,12 +21,11 @@ void Level::Update(float dt)
     for (GameObject *Object: m_Objects)
 	{
         Object->Update(dt);
-		for (GameObject* NextObject : m_Objects)
+		for (GameObject* Wall : m_Walls)
 		{
-			if (Object != NextObject && Object->FindIntersection(NextObject))
+			if (Object->FindIntersection(Wall))
 			{
-				Object->OnColliderEnter(NextObject);
-				Println("%", NextObject->Position);
+				Object->OnColliderEnter(Wall);
 			}
 		}
 	}
@@ -40,6 +41,10 @@ void Level::Update(float dt)
 void Level::Draw(RectRenderer *Renderer)
 {
 	for(GameObject *Object: m_Objects)
+	{
+		Renderer->DrawRect(Object->Position, Object->Size, Object->Origin, Object->Rotation, Object->FillColor);
+	}
+	for (RectangleShape* Object : m_Walls)
 	{
 		Renderer->DrawRect(Object->Position, Object->Size, Object->Origin, Object->Rotation, Object->FillColor);
 	}

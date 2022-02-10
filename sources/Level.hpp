@@ -9,6 +9,7 @@ class Level
 {
 private:
 	List<GameObject*> m_Objects;
+	List<GameObject*> m_Walls;
 	List<GameObject*> m_PendingAddObjects;
 	List<GameObject*> m_PendingRemoveObjects;
 public:

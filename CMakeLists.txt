@@ -16,7 +16,9 @@ set(SAMPLE_SOURCES
     "sources/GameObject.cpp"
     "sources/Level.cpp"
     "sources/Player.cpp"
-    "sources/RectangleShape.cpp")
+    "sources/RectangleShape.cpp"
+    "sources/Wall.cpp"
+)
 
 set(SAMPLE_INCLUDE
     "sources/"
