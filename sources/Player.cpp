@@ -31,7 +31,10 @@ void Player::RotationUpdate()
 }
 void Player::Movement(float dx, float dy)
 {
-	Position += Vector2f(dx, dy);
+	if(!IsCrashed)
+	{
+		Position += Vector2f(dx, dy);
+	}
 }
 void Player::Shooting()
 {
