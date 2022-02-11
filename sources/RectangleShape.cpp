@@ -11,7 +11,7 @@ bool RectangleShape::FindIntersection(RectangleShape *Wall)
 	 && this->Position.x - this->Origin.x < Wall->Position.x + Wall->Origin.x
 	 && this->Position.y - this->Origin.y < Wall->Position.y + Wall->Origin.y)
 	{
-		Println("Crashed");
+		//Println("Crashed");
 		return true;
 	}
 }
