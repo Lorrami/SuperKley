@@ -1,7 +1,4 @@
 #include "GameObject.hpp"
+#include "core/print.hpp"
 
-void GameObject::OnColliderEnter(GameObject* NextObject)
-{
-	//std::cout << NextObject << std::endl;
-}
 void GameObject::Update(float dt){}

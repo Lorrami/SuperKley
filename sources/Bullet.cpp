@@ -2,6 +2,7 @@
 #include "Application.hpp"
 #include <iostream>
 #include <cmath>
+#include <core/print.hpp>
 
 Bullet::Bullet(Vector2f Position, Vector2f Direction)
 {
@@ -16,7 +17,7 @@ Bullet::Bullet(Vector2f Position, Vector2f Direction)
 void Bullet::Update(float dt)
 {
 	m_LifeTime += dt;
-	if (m_LifeTime > m_DeathTime)
+	if (m_LifeTime > m_DeathTime || IsCrashed)
 	{
 		Application::Get().CurLevel().Remove(this);
 	}

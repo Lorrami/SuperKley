@@ -10,6 +10,7 @@ struct RectangleShape
 	Vector2f Size;
 	Vector2f Origin;
 	float Rotation = 0;
+	bool IsCrashed = false;
 
-	bool FindIntersection(RectangleShape *Object);
+	void FindIntersection(RectangleShape *Object);
 };

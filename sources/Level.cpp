@@ -23,10 +23,7 @@ void Level::Update(float dt)
         Object->Update(dt);
 		for (GameObject* Wall : m_Walls)
 		{
-			if (Object->FindIntersection(Wall))
-			{
-				Object->OnColliderEnter(Wall);
-			}
+			Object->FindIntersection(Wall);
 		}
 	}
 	m_Objects.Append(m_PendingAddObjects);
