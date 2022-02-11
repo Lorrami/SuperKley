@@ -1,7 +1,4 @@
 #include "Level.hpp"
-#include "GameObject.hpp"
-#include "Wall.hpp"
-#include "core/print.hpp"
 
 Level::Level()
 {

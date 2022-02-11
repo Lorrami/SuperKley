@@ -1,6 +1,9 @@
 #pragma once
 
 #include "GameObject.hpp"
+#include "Application.hpp"
+#include <iostream>
+#include <cmath>
 
 class Bullet : public GameObject
 {

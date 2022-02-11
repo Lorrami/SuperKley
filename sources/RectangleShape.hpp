@@ -2,6 +2,7 @@
 
 #include <graphics/color.hpp>
 #include <core/math/vector2.hpp>
+#include "core/print.hpp"
 
 struct RectangleShape
 {

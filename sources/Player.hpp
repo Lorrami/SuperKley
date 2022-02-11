@@ -1,6 +1,9 @@
 #pragma once
 
 #include "GameObject.hpp"
+#include "Application.hpp"
+#include "Bullet.hpp"
+#include <cmath>
 #include <core/os/keyboard.hpp>
 #include <core/os/mouse.hpp>
 

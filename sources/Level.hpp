@@ -4,6 +4,9 @@
 #include <2d/rect_renderer.hpp>
 #include <graphics/render_window.hpp>
 #include "Player.hpp"
+#include "GameObject.hpp"
+#include "Wall.hpp"
+#include "core/print.hpp"
 
 class Level
 {
