@@ -1,4 +1,5 @@
 #include "RectangleShape.hpp"
+#include "core/print.hpp"
 
 bool RectangleShape::FindIntersection(RectangleShape *Wall)
 {

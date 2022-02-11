@@ -1,4 +1,7 @@
 #include "Player.hpp"
+#include "Application.hpp"
+#include "Bullet.hpp"
+#include <cmath>
 
 void Player::KeyboardUpdate(float dt)
 {

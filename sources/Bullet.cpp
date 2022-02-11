@@ -1,4 +1,7 @@
 #include "Bullet.hpp"
+#include "Application.hpp"
+#include <iostream>
+#include <cmath>
 
 Bullet::Bullet(Vector2f Position, Vector2f Direction)
 {
